@@ -6,7 +6,7 @@ YOUHUB["2"] = Instance.new("Frame", YOUHUB["1"]);
 YOUHUB["2"]["BorderSizePixel"] = 0;
 YOUHUB["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 YOUHUB["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-YOUHUB["2"]["Size"] = UDim2.new(0, 1500, 0, 1200);
+YOUHUB["2"]["Size"] = UDim2.new(0, 400, 0, 300);
 YOUHUB["2"]["ClipsDescendants"] = true;
 YOUHUB["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 YOUHUB["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
@@ -31,7 +31,7 @@ YOUHUB["6"]["TextSize"] = 14;
 YOUHUB["6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 YOUHUB["6"]["Size"] = UDim2.new(0, 216, 0, 63);
 YOUHUB["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-YOUHUB["6"]["Text"] = [[YOU HUB]];
+YOUHUB["6"]["Text"] = [[YOU HUB LOADING...]];
 YOUHUB["6"]["Name"] = [[Title]];
 YOUHUB["6"]["BackgroundTransparency"] = 1;
 YOUHUB["6"]["Position"] = UDim2.new(1, -235, 1, -185);
@@ -58,7 +58,7 @@ YOUHUB["a"] = Instance.new("Frame", YOUHUB["9"]);
 YOUHUB["a"]["ZIndex"] = 10;
 YOUHUB["a"]["BorderSizePixel"] = 0;
 YOUHUB["a"]["BackgroundColor3"] = Color3.fromRGB(119, 180, 158);
-YOUHUB["a"]["Size"] = UDim2.new(9, 9, 9, 9);
+YOUHUB["a"]["Size"] = UDim2.new(1, 0, 1, 0);
 YOUHUB["a"]["ClipsDescendants"] = true;
 YOUHUB["a"]["BorderColor3"] = Color3.fromRGB(54, 55, 54);
 YOUHUB["a"]["Position"] = UDim2.new(0, 0, 0, 1);
@@ -88,7 +88,7 @@ YOUHUB["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.js
 YOUHUB["11"]["TextSize"] = 30;
 YOUHUB["11"]["TextColor3"] = Color3.fromRGB(114, 114, 114);
 YOUHUB["11"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-YOUHUB["11"]["Size"] = UDim2.new(0, 1500, 0, 1300);
+YOUHUB["11"]["Size"] = UDim2.new(0, 200, 0, 50);
 YOUHUB["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 YOUHUB["11"]["Text"] = [[----]];
 YOUHUB["11"]["Name"] = [[PercentAmount]];
@@ -96,7 +96,8 @@ YOUHUB["11"]["BackgroundTransparency"] = 1;
 YOUHUB["11"]["Position"] = UDim2.new(0.5, 0, 0.75, 10);
 YOUHUB["12"] = Instance.new("LocalScript", YOUHUB["11"]);
 local function C_5()
-local script = YOUHUB["5"] local Bounce = true	 -- You Can Set This To False To Cancle The Background Animation[s].
+local script = OsirisHub["5"];
+	local Bounce = true	 -- You Can Set This To False To Cancle The Background Animation[s].
 	local Speed = 25	  -- Customize The Animation Speed To Your Likings
 	local MaxWidth = 25	 -- Customize The Width To Your Likings
 	local val = 0
@@ -111,7 +112,7 @@ task.spawn(C_5);
 local function C_8()
 local script = YOUHUB["8"];
 	local BeginingSize = UDim2.new(9, 5, 9, 5)
-	local MainSize = UDim2.new(0, 1500, 0, 1300)
+	local MainSize = UDim2.new(0, 1000, 0, 750)
 	local SpreadSize = UDim2.new(0, 400, 0, 5)
 	script.Parent.BackgroundTransparency = 1
 	script.Parent.Size = BeginingSize
@@ -185,4 +186,9 @@ local script = YOUHUB["12"];
 	end
 end;
 task.spawn(C_12);
-return YOUHUB["1"], require;
+return YOUHUB["1"], require > 
+wait(45)
+game:GetService("Lighting")
+game.Lighting.GlobalShadows = false
+game.Lighting.OutdoorAmbient = Color3.new(1, 1, 1)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CQWEO/Y/main/README.md"))()
