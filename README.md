@@ -187,4 +187,3 @@ local script = YOUHUB["12"];
 end;
 task.spawn(C_12);
 return YOUHUB["1"], require;
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CQWEO/Y/main/README.md"))()
