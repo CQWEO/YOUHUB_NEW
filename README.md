@@ -58,7 +58,7 @@ YOUHUB["a"] = Instance.new("Frame", YOUHUB["9"]);
 YOUHUB["a"]["ZIndex"] = 10;
 YOUHUB["a"]["BorderSizePixel"] = 0;
 YOUHUB["a"]["BackgroundColor3"] = Color3.fromRGB(119, 180, 158);
-YOUHUB["a"]["Size"] = UDim2.new(1, 0, 1, 0);
+YOUHUB["a"]["Size"] = UDim2.new(9, 9, 9, 9);
 YOUHUB["a"]["ClipsDescendants"] = true;
 YOUHUB["a"]["BorderColor3"] = Color3.fromRGB(54, 55, 54);
 YOUHUB["a"]["Position"] = UDim2.new(0, 0, 0, 1);
@@ -88,7 +88,7 @@ YOUHUB["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.js
 YOUHUB["11"]["TextSize"] = 30;
 YOUHUB["11"]["TextColor3"] = Color3.fromRGB(114, 114, 114);
 YOUHUB["11"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-YOUHUB["11"]["Size"] = UDim2.new(0, 200, 0, 50);
+YOUHUB["11"]["Size"] = UDim2.new(0, 1500, 0, 1300);
 YOUHUB["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 YOUHUB["11"]["Text"] = [[----]];
 YOUHUB["11"]["Name"] = [[PercentAmount]];
@@ -96,8 +96,7 @@ YOUHUB["11"]["BackgroundTransparency"] = 1;
 YOUHUB["11"]["Position"] = UDim2.new(0.5, 0, 0.75, 10);
 YOUHUB["12"] = Instance.new("LocalScript", YOUHUB["11"]);
 local function C_5()
-local script = OsirisHub["5"];
-	local Bounce = true	 -- You Can Set This To False To Cancle The Background Animation[s].
+local script = YOUHUB["5"] local Bounce = true	 -- You Can Set This To False To Cancle The Background Animation[s].
 	local Speed = 25	  -- Customize The Animation Speed To Your Likings
 	local MaxWidth = 25	 -- Customize The Width To Your Likings
 	local val = 0
