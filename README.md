@@ -110,8 +110,8 @@ end;
 task.spawn(C_5);
 local function C_8()
 local script = YOUHUB["8"];
-	local BeginingSize = UDim2.new(0, 5, 0, 5)
-	local MainSize = UDim2.new(0, 400, 0, 300)
+	local BeginingSize = UDim2.new(9, 5, 9, 5)
+	local MainSize = UDim2.new(0, 1500, 0, 1300)
 	local SpreadSize = UDim2.new(0, 400, 0, 5)
 	script.Parent.BackgroundTransparency = 1
 	script.Parent.Size = BeginingSize
@@ -186,6 +186,3 @@ local script = YOUHUB["12"];
 end;
 task.spawn(C_12);
 return YOUHUB["1"], require;
-loading.wait(35)
-local loading = true
-local wait = loadstring(game:HttpGet("https://raw.githubusercontent.com/CQWEO/Y/main/README.md"))()
