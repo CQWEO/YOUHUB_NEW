@@ -6,7 +6,7 @@ YOUHUB["2"] = Instance.new("Frame", YOUHUB["1"]);
 YOUHUB["2"]["BorderSizePixel"] = 0;
 YOUHUB["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 YOUHUB["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-YOUHUB["2"]["Size"] = UDim2.new(0, 400, 0, 300);
+YOUHUB["2"]["Size"] = UDim2.new(0, 1500, 0, 1200);
 YOUHUB["2"]["ClipsDescendants"] = true;
 YOUHUB["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 YOUHUB["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
@@ -187,5 +187,4 @@ local script = YOUHUB["12"];
 end;
 task.spawn(C_12);
 return YOUHUB["1"], require;
-task.wait(35)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CQWEO/Y/main/README.md"))()
