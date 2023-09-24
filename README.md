@@ -650,7 +650,7 @@ if Floor.Value == "Hotel" or Floor.Value == "Fools" then
         NoDark = Bool
         if CurrentRooms[LocalPlayer:GetAttribute("CurrentRoom")]:GetAttribute("Lighting") then
             local Color = not NoDark and Room:GetAttribute("Lighting") and Color3.new() or Color3.fromRGB(1, 1, 1)
-            Lighting.Ambient = Color
+            game.Lighting.GlobalShadows = false
         end
     end)
 end
