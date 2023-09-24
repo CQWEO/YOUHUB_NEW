@@ -624,7 +624,6 @@ if Floor.Value == "Hotel" or Floor.Value == "Fools" then
         end
     end)
 end
-if Floor.Value == "Rooms" then
 Tab2:Toggle("Disable A-90","Disables A-90 visual, sound, and damage.",false,function(Bool)
         DisableA90 = Bool
     end)
@@ -648,9 +647,8 @@ end)
 if Floor.Value == "Hotel" or Floor.Value == "Fools" then
     Tab2:Toggle("Glow","Makes it so you can see further in dark rooms.",false,function(Bool)
         NoDark = Bool
-        if CurrentRooms[LocalPlayer:GetAttribute("CurrentRoom")]:GetAttribute("Lighting") then
-            local Color = not NoDark and Room:GetAttribute("Lighting") and Color3.new() or Color3.fromRGB(1, 1, 1)
-            game.Lighting.GlobalShadows = false
+        if game.Lighting.GlobalShadows = false
+game.Lighting.OutdoorAmbient = Color3.new(1, 1, 1)
         end
     end)
 end
