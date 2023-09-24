@@ -646,10 +646,10 @@ Tab2:Toggle("Item ESP","Highlights items like Keys, Books, and Crucifixes throug
     end
 end)
 if Floor.Value == "Hotel" or Floor.Value == "Fools" then
-    Tab2:Toggle("No Darkness Effect","Makes it so you can see further in dark rooms.",false,function(Bool)
+    Tab2:Toggle("Glow","Makes it so you can see further in dark rooms.",false,function(Bool)
         NoDark = Bool
-        if CurrentRooms[LocalPlayer:GetAttribute("CurrentRoom")]:GetAttribute("IsDark") then
-            local Color = not NoDark and Room:GetAttribute("IsDark") and Color3.new() or Color3.fromRGB(67, 51, 56)
+        if CurrentRooms[LocalPlayer:GetAttribute("CurrentRoom")]:GetAttribute("Lighting") then
+            local Color = not NoDark and Room:GetAttribute("Lighting") and Color3.new() or Color3.fromRGB(1, 1, 1)
             Lighting.Ambient = Color
         end
     end)
