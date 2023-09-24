@@ -1,8 +1,3 @@
-task.wait()
-game:GetService("Lighting")
-game.Lighting.GlobalShadows = false
-game.Lighting.OutdoorAmbient = Color3.new(1, 1, 1)
-task.wait()
 local IMAGE = "rbxassetid://637373817841"
 local Positions = UDim2.new(0.822025776, 0, 0.0401606411, 0)
 local Sizes = UDim2.new(0, 76, 0, 70)
@@ -26,10 +21,9 @@ ImageButton.MouseButton1Down:connect(function()
 	local vim = game:service("VirtualInputManager")
 	vim:SendKeyEvent(fales, "RightControl", false, game)
 end)
-task.wait()
 if game.CoreGui:FindFirstChild("FluxLib") or game.CoreGui:FindFirstChild("Message") then return end
 local Flux = loadstring(game:HttpGet("https://lolcat.boo/assets/flux-fixed"))()
-local Window = Flux:Window("YOU HUB", "BY [rechedmcvn]", Color3.new(7,9.9), Enum.KeyCode.RightControl)
+local Window = Flux:Window("YOU HUB", "v2.7.3", Color3.new(7,9.9), Enum.KeyCode.RightControl)
 local Tab = Window:Tab("Main", "rbxassetid://6026568198")
 local Tab2 = Window:Tab("Visual", "rbxassetid://6031763426")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -630,6 +624,7 @@ if Floor.Value == "Hotel" or Floor.Value == "Fools" then
         end
     end)
 end
+if Floor.Value == "Rooms" then
 Tab2:Toggle("Disable A-90","Disables A-90 visual, sound, and damage.",false,function(Bool)
         DisableA90 = Bool
     end)
@@ -650,6 +645,15 @@ Tab2:Toggle("Item ESP","Highlights items like Keys, Books, and Crucifixes throug
         end
     end
 end)
+if Floor.Value == "Hotel" or Floor.Value == "Fools" then
+    Tab2:Toggle("No Darkness Effect","Makes it so you can see further in dark rooms.",false,function(Bool)
+        NoDark = Bool
+        if CurrentRooms[LocalPlayer:GetAttribute("CurrentRoom")]:GetAttribute("IsDark") then
+            local Color = not NoDark and Room:GetAttribute("IsDark") and Color3.new() or Color3.fromRGB(67, 51, 56)
+            Lighting.Ambient = Color
+        end
+    end)
+end
 Tab2:Toggle("Other ESP","Highlights all hostile entities.",false,function(Bool)
     OtherESP = Bool
     for _,Object in pairs(workspace:GetDescendants()) do
