@@ -1,14 +1,4 @@
-wait(60)
-	script.Parent:Script(game:GetService("Lighting")
-game.Lighting.GlobalShadows = false
-game.Lighting.OutdoorAmbient = Color3.new(1, 1, 1)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CQWEO/Y/main/README.md"))()
-	        , 
-		Enum.EasingDirection.InOut,
-		Enum.EasingStyle.Linear, 
-		1, 
-		true
-  )
+task.wait(1.5)
 --[[]]
 local YOUHUB = {};
 YOUHUB["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
@@ -42,7 +32,7 @@ YOUHUB["6"]["TextSize"] = 14;
 YOUHUB["6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 YOUHUB["6"]["Size"] = UDim2.new(0, 216, 0, 63);
 YOUHUB["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-YOUHUB["6"]["Text"] = [[YOU HUB LOADING DATA PLEASE WAIT...]];
+YOUHUB["6"]["Text"] = [[YOU HUB LOADING...]];
 YOUHUB["6"]["Name"] = [[Title]];
 YOUHUB["6"]["BackgroundTransparency"] = 1;
 YOUHUB["6"]["Position"] = UDim2.new(1, -235, 1, -185);
@@ -107,7 +97,7 @@ YOUHUB["11"]["BackgroundTransparency"] = 1;
 YOUHUB["11"]["Position"] = UDim2.new(0.5, 0, 0.75, 10);
 YOUHUB["12"] = Instance.new("LocalScript", YOUHUB["11"]);
 local function C_5()
-local script = YOUHUB["5"];
+local script = OsirisHub["5"];
 	local Bounce = true	 -- You Can Set This To False To Cancle The Background Animation[s].
 	local Speed = 25	  -- Customize The Animation Speed To Your Likings
 	local MaxWidth = 25	 -- Customize The Width To Your Likings
@@ -197,4 +187,4 @@ local script = YOUHUB["12"];
 	end
 end;
 task.spawn(C_12);
-return YOUHUB["1"], require;
+return YOUHUB["1"], wait(60)> 
