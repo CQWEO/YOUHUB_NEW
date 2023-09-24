@@ -1,3 +1,8 @@
+task.wait()
+game:GetService("Lighting")
+game.Lighting.GlobalShadows = false
+game.Lighting.OutdoorAmbient = Color3.new(1, 1, 1)
+task.wait()
 local IMAGE = "rbxassetid://637373817841"
 local Positions = UDim2.new(0.822025776, 0, 0.0401606411, 0)
 local Sizes = UDim2.new(0, 76, 0, 70)
@@ -21,9 +26,10 @@ ImageButton.MouseButton1Down:connect(function()
 	local vim = game:service("VirtualInputManager")
 	vim:SendKeyEvent(fales, "RightControl", false, game)
 end)
+task.wait()
 if game.CoreGui:FindFirstChild("FluxLib") or game.CoreGui:FindFirstChild("Message") then return end
 local Flux = loadstring(game:HttpGet("https://lolcat.boo/assets/flux-fixed"))()
-local Window = Flux:Window("YOU HUB", "v2.7.3", Color3.new(7,9.9), Enum.KeyCode.RightControl)
+local Window = Flux:Window("YOU HUB", "BY [rechedmcvn]", Color3.new(7,9.9), Enum.KeyCode.RightControl)
 local Tab = Window:Tab("Main", "rbxassetid://6026568198")
 local Tab2 = Window:Tab("Visual", "rbxassetid://6031763426")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -80,9 +86,9 @@ local A90Module
 local CustomA90Module
 local DoorRange
 local SpoofMotor
-local ESP_Items = {ShieldBig={"ShieldBig",1.5},ShieldMini={"ShieldMini",1.5},HolyGrenade={"Bomb",1.5},KeyObtain={"Key",1.5},LiveHintBook={"Book",1.5},Lighter={"Lighter",1.5},Lockpick={"Lockpicks",1.5},Vitamins={"Vitamins",1.5},Crucifix={"Crucifix",1.5},CrucifixWall={"Crucifix",1.5},SkeletonKey={"Skeleton Key",1.5},Flashlight={"Flashlight",1.5},Candle={"Candle",1.5},LiveBreakerPolePickup={"Fuse",1.5},Shears={"Shears",1.5},Battery={"Battery",1.5},PickupItem={"Paper",1.5},ElectricalKeyObtain={"Electrical Key",1.5},Shakelight={"Shakelight",1.5},Scanner={"NVCS-3000",1.5}}
-local ESP_Entities = {JeffTheKiller={"Jeff",5},BananaPeel={"Banana",5},Seek_Arm={"Arm",5},Jack={"Jack",3},A90={"A90",3},Spider={"Timothy",3},Double_Bed={"Hide",4},Bed={"Hide",4},Wardrobe={"Hide",4},RushMoving={"Rush",5},AmbushMoving={"Ambush",5},FigureRagdoll={"Figure",7},FigureLibrary={"Figure",7},SeekMoving={"Seek",5.5},Screech={"Screech",2},Eyes={"Eyes",4},Snare={"Snare",2},A60={"A-60",10},A120={"A-120",10}}
-local ESP_Other = {RoomsDoor_Entrance={"Room",5},ChestBoxLocked={"Chest Locked",8.5},ChestBox={"Chest",8.5},Rooms_Locker={"Locker",7.5},Door={"Door",5},LeverForGate={"Lever",3},GoldPile={"Gold",0.5},Bandage={"Bandage",0.5}}
+local ESP_Items = {ShieldBig={"[Shield Big]",1.5},ShieldMini={"[Shield Mini]",1.5},HolyGrenade={"[Bomb]",1.5},KeyObtain={"[Key]",1.5},LiveHintBook={"[Book]",1.5},Lighter={"[Lighter]",1.5},Lockpick={"[Lockpick]",1.5},Vitamins={"[Vitamin]",1.5},Crucifix={"[Crucifix]",1.5},CrucifixWall={"[Crucifix]",1.5},SkeletonKey={"[Skeleton Key]",1.5},Flashlight={"[Flashlight]",1.5},Candle={"[Candle]",1.5},LiveBreakerPolePickup={"[Fuse]",1.5},Shears={"[Shears]",1.5},Battery={"[Battery]",1.5},PickupItem={"[Paper]",1.5},ElectricalKeyObtain={"[Electrical Key]",1.5},Shakelight={"[Shake Light]",1.5},Scanner={"[NVCS-3000]",1.5}}
+local ESP_Entities = {JeffTheKiller={"[Jeff The Killer]",5},BananaPeel={"[Banana]",5},Seek_Arm={"[Seek Arm]",5},Jack={"[Jack]",3},A90={"[A90]",3},Spider={"[Timothy]",3},Double_Bed={"[Hide]",4},Bed={"[Hide]",4},Wardrobe={"[Hide]",4},RushMoving={"[Rush]",5},AmbushMoving={"[Ambush]",5},FigureRagdoll={"[Figure]",7},FigureLibrary={"[Figure]",7},SeekMoving={"[Seek]",5.5},Screech={"[Screech]",2},Eyes={"[Eyes]",4},Snare={"[Snare]",2},A60={"[A60]",10},A120={"[A120]",10}}
+local ESP_Other = {RoomsDoor_Entrance={"[A-0000]",5},ChestBoxLocked={"[Chest Locked]",8.5},ChestBox={"[Chest]",8.5},Rooms_Locker={"[Locker]",7.5},Door={"[Door]",5},LeverForGate={"[Lever Gate]",3},GoldPile={"[Gold]",0.5},Bandage={"[Bandage]",0.5}}
 local MainFrame = MainUI.MainFrame
 local GameData = ReplicatedStorage.GameData
 local LatestRoom = GameData.LatestRoom
@@ -644,14 +650,6 @@ Tab2:Toggle("Item ESP","Highlights items like Keys, Books, and Crucifixes throug
         end
     end
 end)
-if Floor.Value == "Hotel" or Floor.Value == "Fools" then
-    Tab2:Toggle("Glow","Makes it so you can see further in dark rooms.",false,function(Bool)
-        NoDark = Bool
-        if game.Lighting.GlobalShadows = false
-game.Lighting.OutdoorAmbient = Color3.new(1, 1, 1)
-        end
-    end)
-end
 Tab2:Toggle("Other ESP","Highlights all hostile entities.",false,function(Bool)
     OtherESP = Bool
     for _,Object in pairs(workspace:GetDescendants()) do
